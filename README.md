@@ -2,7 +2,7 @@
 
 [演示地址](https://theputian.com/demo-dg-table/dist/index.html)
 
-### 兼容 ie <= 8 
+### 兼容 ie >= 8
 
 #### vue-cli3.0解决方案
 先安装```@babel/polyfill```
