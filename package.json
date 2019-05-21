@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dg-mp": "dg-mp"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "dg-mp": "^1.0.3",
     "dg-table": "^0.2.0",
     "element-ui": "^2.4.11",
     "vue": "^2.5.17"

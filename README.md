@@ -1,21 +1,75 @@
 # demo-dg-table
 
-## Project setup
-```
-npm install
+[演示地址](https://theputian.com/demo-dg-table/dist/index.html)
+
+### 兼容 ie <= 8 
+
+#### vue-cli3.0解决方案
+先安装```@babel/polyfill```
+```npm
+npm i --dev @babel/polyfill 或者 yarn add --dev @babel/polyfill
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+在入口文件```main.js```添加依赖
+```js
+import '@babel/polyfill'
 ```
 
-### Lints and fixes files
+修改```babel.config.js```
+```js
+module.exports = {
+  presets: [
+    [
+      '@vue/app',
+      {
+        useBuiltIns: 'entry'
+      }
+    ]
+  ]
+}
 ```
-npm run lint
+
+修改```vue.config.js```
+```js
+module.exports = {
+  ...
+  transpileDependencies: ['/node_modules/dg-table']
+}
+```
+
+
+#### vue-cli2.0解决方案
+
+先安装```babel-polyfill```
+
+在入口文件```main.js```添加依赖
+```js
+import 'babel-polyfill'
+```
+
+在build文件夹下找到```webpack.base.conf.js```修改如下
+```js
+module.export = {
+    entry: {
+      app: ['babel-polyfill', './src/main.js']
+    }
+}
+```
+
+找到```webpack.base.conf.js```中的```babel-loder```添加如下
+```js
+module: {
+  rules: [
+    ....,
+    ....,
+    {
+      test: /\.js$/,
+      loader: 'babel-loader',
+      include: [
+        ....,
+        resolve('/node_modules/dg-table')
+      ]
+    }
+  ]
+}
 ```
