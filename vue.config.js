@@ -3,5 +3,5 @@ module.exports = {
   baseUrl: './',
   // 生产环境是否生成 sourceMap 文件
   productionSourceMap: false,
-  transpileDependencies: []
+  transpileDependencies: ['/node_modules/dg-table']
 }
