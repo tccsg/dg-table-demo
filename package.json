@@ -9,13 +9,15 @@
     "dg-mp": "dg-mp"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
-    "dg-mp": "^1.0.3",
+    "connect": "^3.7.0",
     "dg-table": "^0.2.0",
     "element-ui": "^2.4.11",
+    "server-static": "^2.0.5",
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "dg-mp": "^1.0.3",
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-eslint": "^3.0.0",
     "@vue/cli-service": "^3.0.0",

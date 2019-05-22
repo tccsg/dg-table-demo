@@ -33,7 +33,7 @@ module.exports = {
 ```js
 module.exports = {
   ...
-  transpileDependencies: ['/node_modules/dg-table']
+  transpileDependencies: ['dg-table/lib']
 }
 ```
 
@@ -67,7 +67,7 @@ module: {
       loader: 'babel-loader',
       include: [
         ....,
-        resolve('/node_modules/dg-table')
+        resolve('/node_modules/dg-table/lib')
       ]
     }
   ]
