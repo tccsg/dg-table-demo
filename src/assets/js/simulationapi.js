@@ -68,8 +68,8 @@ export const radiodata = () => {
 // 随机生成表数据
 export const createTableDataByRandom = (len) => {
   let users = []
-  const xarr = ['王', '黄', '陈', '方', '林', '刘', '张', '吴', '蔡', '龚', '杨', '潘', '俞', '庄', '许', '徐', '欧阳', '欧', '诸葛', '肖', '涂', '严', '颜', '冯', '曾']
-  const nchar = ['容止', '羡林', '芷', '回', '言蹊', '思睿', '怀瑾', '瑾', '遇', '道韫', '弦', '柳', '酒', '梦', '桑', '遥', '雨夕', '风遥', '雁白', '青沐', '合', '逸思', '霏', '清疏', '秋荻', '廷轩', '轩', '宇', '絮影', '清淮', '柳依', '寒箫', '箫', '惜夏', '意轩', '旖旎', '慕青', '宣', '晓', '沛', '斯年', '莲舟', '依凝', '井与', '予锦', '艳', '淑芬', '思哲', '湛', '梦文', '承嗣', '博艺', '玲杰', '德馨', '琪维', '俊', '钰', '蔚', '彬郁', '诗嘉', '津媛', '艺歆', '奕然', '雯梦', '思佳']
+  const xarr = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M']
+  const nchar = ['ZL', 'XL', 'Z', 'H', 'YX', 'SL', 'HJ', 'J', 'Y', 'DY', 'X', 'L', 'J', 'M', 'S', 'Y', 'YX', 'FY', 'YB', 'QM', 'H', 'YS', 'F', 'QS', 'QD', 'TX', 'X', 'Y', 'XY', 'QH', 'LY', 'HX', 'X', 'XX', 'YX', 'LY', 'MQ', 'X', 'X', 'P', 'SN', 'LZ', 'YN', 'JY', 'YJ', 'Y', 'SF', 'SZ', 'Z', 'MW', 'CS', 'BY', 'LJ', 'DX', 'QW', 'J', 'Y', 'W', 'BY', 'SJ', 'JY', 'YY', 'YR', 'WM', 'SJ']
   const phead = ['134', '135', '137', '138', '155', '130', '186', '133', '153', '180', '150', '151', '188']
   const numstr = '0123456789'
   const gchar = ['1', '2']
@@ -106,7 +106,8 @@ export const createTableDataByRandom = (len) => {
       birthPlace,
       name: curx + curn,
       uid: randomString(16),
-      birthDay: cury + '.' + curm + '.' + curd
+      birthDay: cury + '.' + curm + '.' + curd,
+      createAt: new Date()
     }
     users.push(curuser)
   }
