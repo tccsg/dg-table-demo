@@ -10,7 +10,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "dg-mp": "^1.0.3",
-    "dg-table": "^2.0.6",
+    "dg-table": "^2.1.1",
     "element-ui": "^2.11.1",
     "vue": "^2.6.10"
   },

@@ -2975,10 +2975,10 @@ dg-mp@^1.0.0, dg-mp@^1.0.3:
     serve-static "^1.14.0"
     update-notifier "^2.5.0"
 
-dg-table@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/dg-table/-/dg-table-2.0.6.tgz#36fc00b04be2c2511a38685971d8d2adb0980a90"
-  integrity sha512-kCDF2zqVSxVt9Uf27qOvijqHkPzdaSHlcPWKRH6nyrIG4LMVZkdeMezo7rdh8BNxpbfT5LvnLTGG7SJ6mtOa+w==
+dg-table@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/dg-table/-/dg-table-2.1.1.tgz#7887fe67376701abd22461672d1cda7188978291"
+  integrity sha512-TvkrlFheOlOq2e0Lh5Z8BEH5TO+cakneRhr6/vjhQVmVCWP/soCIx/DJy6xfsG8sX7QzVW0bouAFXd65aa598g==
   dependencies:
     core-js "^2.6.5"
     dg-mp "^1.0.3"

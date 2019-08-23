@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    已选：{{multipleSelection.length}}
     <dg-table
       :configs="configs"
       tableId='account'
@@ -12,8 +13,16 @@
       stripe
       show-summary
       highlight-current-row
-      :default-sort = "{prop: 'date', order: 'descending'}"
+      :default-sort="ds"
+
     ></dg-table>
+    <div>
+    </div>
+    <div>
+      <div v-for="(val, key, index) in filters" :key="index">
+        <div><span>{{key}}：</span><span>{{val}}</span></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -37,9 +46,15 @@ export default {
   },
   data() {
     return {
+      multipleSelection: [],
+      filters: {},
       value1: '',
       tableData: [],
       search: "",
+      ds: {
+        prop: 'age',
+        order: 'descending'
+      },
       configs: [
         {
           columnConfig: {
@@ -60,8 +75,7 @@ export default {
         {
           columnConfig: {
             prop: "name",
-            label: "姓名",
-            sortable: true
+            label: "姓名"
           }
         },
         {
@@ -113,7 +127,8 @@ export default {
         {
           columnConfig: {
             prop: "age",
-            label: "年龄"
+            label: "年龄",
+            sortable: true
           }
         },
         {
@@ -139,11 +154,14 @@ export default {
     rowClick (row, column) {
       console.log(row, column)
     },
-    filterChange (res) {
-      console.log(res)
+    filterChange (data) {
+      // filter-Change跟el-table共用这边做判断
+      if (data.type) {
+        this.$set(this.filters, data.key, data.res.value)
+      }
     },
     handleSelectionChange(val) {
-      console.log(val)
+      this.multipleSelection = val
     }
   }
 };
